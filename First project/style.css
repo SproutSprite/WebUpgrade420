@@ -1,0 +1,187 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a5acaf; /* Seahawks Silver */
+}
+
+/* Navigation styles */
+nav {
+  background-color: #002244; /* Seahawks Navy */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+nav li {
+  padding: 0 1rem;
+}
+
+nav a {
+  color: #69be28; /* Seahawks Green */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero image styles */
+.hero-image {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #69be28; /* Seahawks Green */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #002244; /* Seahawks Navy */
+}
+
+/* Age verification modal styles */
+.overlay {
+  /* ... existing styles ... */
+}
+
+.modal {
+  /* ... existing styles ... */
+  border: 3px solid #69be28; /* Seahawks Green */
+}
+
+/* Button styles */
+.button {
+  background-color: #69be28; /* Seahawks Green */
+  /* ... existing styles ... */
+}
+
+.button:hover {
+  background-color: #002244; /* Seahawks Navy */
+  color: #69be28; /* Seahawks Green */
+  border: 1px solid #69be28; /* Seahawks Green */
+}
+
+/* Footer styles */
+footer {
+  background-color: #002244; /* Seahawks Navy */
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.disclaimer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #a5acaf; /* Seahawks Silver */
+  color: #1b6651;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    padding: 0.5rem 0;
+  }
+
+  .hero-text {
+    font-size: smaller;
+  }
+
+  .modal button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .gps iframe {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-image img {
+    border-bottom-width: 3px;
+  }
+
+  .hero-text {
+    width: 90%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  /* ... other styles ... */
+
+  /* Overlay styles */
+  .overlay {
+    position: fixed; /* Full viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.8); /* Gray out the screen */
+    z-index: 1000; /* Ensures it's on top of other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px; /* Maximum width of the modal box */
+  }
+
+  /* Button styles within the modal */
+  .modal button {
+    background-color: #69be28; /* Seahawks Green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .modal button:hover {
+    background-color: #002244; /* Seahawks Navy */
+  }
+  .disclaimer {
+    color: #69be28;
+  }
+  /* ... media queries and other styles ... */
+}
